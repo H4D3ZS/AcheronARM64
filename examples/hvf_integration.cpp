@@ -9,7 +9,7 @@ using namespace acheronarm64;
 /**
  * Example: Handling HVF system register traps with AcheronARM64
  * 
- * This demonstrates how to integrate AcheronARM64 with Apple's
+ * This demonstrates how to integrate AcheronARM64 with macOS
  * Hypervisor.framework to emulate trapped system instructions.
  */
 
