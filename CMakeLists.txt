@@ -97,6 +97,16 @@ if(ACHERONARM64_BUILD_EXAMPLES)
     add_subdirectory(examples)
 endif()
 
+# CLI Tools
+add_executable(acheron
+    tools/acheron.cpp
+)
+target_link_libraries(acheron PRIVATE arm64emu)
+target_compile_features(acheron PRIVATE cxx_std_17)
+
+# Install CLI tool
+install(TARGETS acheron DESTINATION bin)
+
 # Package metadata
 set(CPACK_PACKAGE_NAME "AcheronARM64")
 set(CPACK_PACKAGE_DESCRIPTION_SUMMARY "ARM64 System Register Emulation Library")
